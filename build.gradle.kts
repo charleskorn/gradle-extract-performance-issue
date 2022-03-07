@@ -23,7 +23,7 @@ val extractWithCommandLineTool = tasks.register<Exec>("extractWithCommandLineToo
 }
 
 val extractWithSync = tasks.register<Sync>("extractWithSync") {
-    from(tarTree(downloadArchive.map{ it.dest })) {
+    from(tarTree(downloadArchive.map { it.dest })) {
         eachFile {
             relativePath = RelativePath(true, *relativePath.segments.drop(1).toTypedArray())
         }
@@ -39,7 +39,7 @@ val extractWithCustomAction = tasks.register("extractWithDoLast") {
 
     doLast {
         sync {
-            from(tarTree(downloadArchive.map{ it.dest })) {
+            from(tarTree(downloadArchive.map { it.dest })) {
                 eachFile {
                     relativePath = RelativePath(true, *relativePath.segments.drop(1).toTypedArray())
                 }
