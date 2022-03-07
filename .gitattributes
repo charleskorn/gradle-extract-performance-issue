@@ -1,0 +1,12 @@
+*                text=auto
+
+*.kts            text       eol=lf
+gradlew          text       eol=lf
+
+*.bat            text       eol=crlf
+*.cmd            text       eol=crlf
+
+*.jar            binary
+
+*.gitignore      text=auto
+*.gitattributes  text=auto
